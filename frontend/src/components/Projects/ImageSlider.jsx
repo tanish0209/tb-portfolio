@@ -32,7 +32,7 @@ const ImageSlider = ({ images, delay = 4000 }) => {
             <img
               src={img}
               alt={`slide-${i}`}
-              className="w-[100vw] h-full sm:h-auto sm:w-[65vh] md:w-[80vh] lg:w-[55vh] object-cover"
+              className="w-[100vw] h-full sm:h-auto sm:w-[65vh] md:w-[80vh] lg:w-[60vh] object-cover"
             />
           </div>
         ))}

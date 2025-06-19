@@ -19,20 +19,24 @@ const ImageSlider = ({ images, delay = 4000 }) => {
   }, [index]);
 
   return (
-    <div className="relative w- h-auto aspect-square sm:aspect-[4/3] overflow-hidden rounded-lg">
+    <div className="relative w-full aspect-[7/6] overflow-hidden rounded-lg">
       <div
-        className="flex transition-transform duration-700 ease-in-out"
+        className="flex transition-transform duration-700 ease-in-out h-full"
         style={{
-          transform: `translateX(-${index * 100}%)`,
+          transform: `translateX(-${index * (100 / images.length)}%)`,
           width: `${images.length * 100}%`,
         }}
       >
         {images.map((img, i) => (
-          <div key={i} className="w-full flex-shrink-0">
+          <div
+            key={i}
+            style={{ width: `${100 / images.length}%` }}
+            className="h-full flex items-center justify-center"
+          >
             <img
               src={img}
               alt={`slide-${i}`}
-              className="w-[100vw] h-full sm:h-auto sm:w-[65vh] md:w-[80vh] lg:w-[60vh] object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
         ))}

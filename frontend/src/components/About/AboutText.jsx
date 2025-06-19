@@ -44,11 +44,11 @@ const AboutText = () => {
             , which built a solid foundation in problem-solving.
             <br />
             <br />
-            I'm also a passionate hackathon enthusiast, having participated in
-            events like{" "}
+            I'm also a passionate hackathon enthusiast, having showcased
+            innovative solutions and competed in events like{" "}
             <span className="text-[var(--text-secondary)] font-bold">
-              EY Techathon 5.0 (qualified till Round 2), Amazon HackOn, Flipkart
-              Grid 6.0, and GDG Hackathon.
+              EY Techathon 5.0, Amazon HackOn, Flipkart Grid 6.0, and GDG
+              Hackathon.
             </span>{" "}
             <br />
             <br />

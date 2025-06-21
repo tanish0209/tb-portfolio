@@ -77,7 +77,8 @@ const AboutText = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub Profile: github.com/tanish0209
+              GitHub Profile: <br />
+              github.com/tanish0209
             </a>
           </div>
           <div className="flex justify-center items-center">
@@ -87,7 +88,8 @@ const AboutText = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn Profile: linkedin.com/in/tanish-bajaj
+              LinkedIn Profile: <br />
+              linkedin.com/in/tanish-bajaj
             </a>
           </div>
           <div className="flex justify-center items-center">
@@ -97,7 +99,8 @@ const AboutText = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Leetcode Profile: leetcode.com/u/TanishBajaj02
+              Leetcode Profile: <br />
+              leetcode.com/u/TanishBajaj02
             </a>
           </div>
         </motion.div>

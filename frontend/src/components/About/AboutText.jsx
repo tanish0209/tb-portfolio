@@ -72,7 +72,7 @@ const AboutText = () => {
         >
           <div className="flex justify-center items-center">
             <a
-              className="text-[var(--text-secondary)] text-sm md:text-lg px-4 py-2 hover:bg-[#1e1e1e] rounded-xl hover:border border-[#424242] transition duration-300 text-center"
+              className="text-[var(--text-secondary)] font-medium text-sm md:text-lg px-4 py-2 hover:bg-[var(--text-secondary)] hover:text-black rounded-xl hover:border border-[#424242] transition duration-300 text-center"
               href="https://github.com/tanish0209"
               target="_blank"
               rel="noopener noreferrer"
@@ -82,7 +82,7 @@ const AboutText = () => {
           </div>
           <div className="flex justify-center items-center">
             <a
-              className="text-[var(--text-secondary)] text-sm md:text-lg px-4 py-2 hover:bg-[#1e1e1e] rounded-xl hover:border border-[#424242] transition duration-300 text-center"
+              className="text-[var(--text-secondary)] font-medium text-sm md:text-lg px-4 py-2 hover:bg-[var(--text-secondary)] hover:text-black rounded-xl hover:border border-[#424242] transition duration-300 text-center"
               href="https://www.linkedin.com/in/tanish-bajaj/"
               target="_blank"
               rel="noopener noreferrer"
@@ -92,7 +92,7 @@ const AboutText = () => {
           </div>
           <div className="flex justify-center items-center">
             <a
-              className="text-[var(--text-secondary)] text-sm md:text-lg px-4 py-2 hover:bg-[#1e1e1e] rounded-xl hover:border border-[#424242] transition duration-300 text-center"
+              className="text-[var(--text-secondary)] font-medium text-sm md:text-lg px-4 py-2 hover:bg-[var(--text-secondary)] hover:text-black rounded-xl hover:border border-[#424242] transition duration-300 text-center"
               href="https://leetcode.com/u/TanishBajaj02/"
               target="_blank"
               rel="noopener noreferrer"

@@ -14,7 +14,7 @@ const HomeSection = () => {
           initial={{ x: "-10vw", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeIn" }}
-          className="order-1 md:order-none text-[var(--text-primary)] flex items-end rounded-xl font-black text-[10vw] md:text-[4vw] md:col-start-1 md:row-start-1"
+          className="order-1 md:order-none text-[var(--text-primary)] flex items-end rounded-xl font-black text-[10vw] mt-2 md:m-0 md:text-[4vw] md:col-start-1 md:row-start-1"
         >
           Hi, I'm
           <br /> Tanish Bajaj

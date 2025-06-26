@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const AboutText = () => {
   return (
-    <div className="py-[6vh] mx-[4vw] overflow-visible">
+    <div className="py-[2vh] mx-[4vw] mt-4 md:mt-0 overflow-visible">
       <div className=" w-full">
         {/* Heading */}
         <motion.div

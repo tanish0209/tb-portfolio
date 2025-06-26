@@ -19,7 +19,7 @@ const gridVariants = {
 const SkillsGrid = () => {
   return (
     <div className="min-h-screen py-[1px]">
-      <div className="py-[6vh] mx-[4vw] mt-10 md:mt-20 overflow-visible flex flex-col gap-8">
+      <div className="py-[2vh] mx-[4vw] mt-4 md:mt-20 overflow-visible flex flex-col gap-8">
         {/* Row 1: Frontend Heading */}
         <motion.div
           variants={headingVariants}

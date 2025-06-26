@@ -52,7 +52,7 @@ const ExperienceContent = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="grid grid-cols-2 md:grid-cols-[45%_10%_45%] items-start md:gap-0 relative"
+              className="grid grid-cols-[20%_80%] md:grid-cols-[45%_10%_45%] items-start md:gap-0 relative"
             >
               {/* Position */}
               <motion.div
@@ -92,7 +92,7 @@ const ExperienceContent = () => {
                   <motion.div
                     variants={fadeInUp}
                     custom={i + 1.5}
-                    className=" md:block border-l-2 border-dashed border-white h-40 min-[300px]:h-38 min-[350px]:h-30 min-[450px]:h-25 sm:h-17 md:h-60 lg:h-90"
+                    className=" md:block border-l-2 border-dashed border-white h-24 min-[450px]:h-17 sm:h-17 md:h-60 lg:h-90"
                   />
                 )}
               </div>
@@ -112,7 +112,7 @@ const ExperienceContent = () => {
                 custom={i + 1}
                 className="col-start-2 row-start-2 md:col-start-3 md:row-start-auto order-3 md:order-3 flex flex-col gap-1 pb-20 md:pb-0"
               >
-                <div className="text-[clamp(0.7rem,1.5vw,1.4rem)] font-medium text-[var(--text-primary)]">
+                <div className="text-[clamp(0.9rem,1.5vw,1.4rem)] font-medium text-[var(--text-primary)]">
                   {exp.desc.split("\n").map((line, index) => (
                     <li
                       key={index}

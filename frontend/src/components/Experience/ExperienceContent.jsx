@@ -58,14 +58,14 @@ const ExperienceContent = () => {
               <motion.div
                 variants={fadeInUp}
                 custom={i + 1}
-                className="col-start-2 row-start-1 md:col-start-1 md:row-start-auto order-2 md:order-1 text-[clamp(1.2rem,2vw,1.8rem)] font-extrabold text-[var(--text-primary)] "
+                className="col-start-2 row-start-1 md:col-start-1 md:row-start-auto order-2 md:order-1 text-[clamp(1.2rem,2vw,1.8rem)] font-extrabold text-[var(--text-secondary)] "
               >
                 {exp.position}
-                <div className="text-[clamp(1rem,1.5vw,1.6rem)] font-medium text-gray-300">
+                <div className="text-[clamp(1rem,1.5vw,1.6rem)] font-medium text-gray-200">
                   {exp.company}
                 </div>
                 {exp.duration && (
-                  <div className="text-[clamp(0.7rem,1.3vw,1.4rem)] text-gray-400 mb-3  md:mb-30">
+                  <div className="text-[clamp(0.7rem,1.3vw,1.4rem)] text-gray-300 mb-3  md:mb-30">
                     {exp.duration}
                   </div>
                 )}

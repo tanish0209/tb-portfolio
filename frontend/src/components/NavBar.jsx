@@ -16,7 +16,7 @@ const NavBar = () => {
   return (
     <div className="fixed left-1/2 -translate-x-1/2 bottom-4 md:top-5 z-100 w-[98%] md:w-[90%] h-[58px] bg-[#1e1e1e] rounded-xl">
       {/* >MD view */}
-      <div className=" hidden md:flex h-[58px] justify-center md:max-w-[1600px] hover:bg-[var(--text-secondary)] rounded-xl transition-colors duration-500 ease-in-out">
+      <div className=" hidden md:flex h-[58px] justify-center hover:bg-[var(--text-secondary)] rounded-xl transition-colors duration-500 ease-in-out">
         <div className="flex mt-0.5 justify-self-center w-[99.8%] h-[94%] rounded-xl bg-[#1e1e1e] border border-[#424242] px-6">
           <ul className="flex justify-around items-center w-full text-white font-medium cursor-pointer">
             {navItems.slice(0, 3).map((item) => (

@@ -20,6 +20,30 @@ const SkillsGrid = () => {
   return (
     <div className="min-h-screen py-[1px]">
       <div className="py-[2vh] mx-[4vw] mt-4 md:mt-20 overflow-visible flex flex-col gap-8">
+        {/* Row 0: Frontend Heading */}
+        <motion.div
+          variants={headingVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <h2 className="inline-block text-3xl font-bold text-[var(--text-primary)] border-b-2 border-[var(--text-secondary)]">
+            Languages
+          </h2>
+        </motion.div>
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          variants={gridVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {skills.languages.map((skill) => (
+            <motion.div key={skill.name} variants={headingVariants}>
+              <SkillCard {...skill} />
+            </motion.div>
+          ))}
+        </motion.div>
         {/* Row 1: Frontend Heading */}
         <motion.div
           variants={headingVariants}
@@ -73,8 +97,34 @@ const SkillsGrid = () => {
             </motion.div>
           ))}
         </motion.div>
+        {/* Row 5: Cloud Heading */}
+        <motion.div
+          variants={headingVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <h2 className="inline-block text-3xl font-bold text-[var(--text-primary)] border-b-2 border-[var(--text-secondary)]">
+            Cloud & Devops
+          </h2>
+        </motion.div>
 
-        {/* Row 5: Tools Heading */}
+        {/* Row 6: Cloud Skills */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          variants={gridVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {skills.cloud.map((skill) => (
+            <motion.div key={skill.name} variants={headingVariants}>
+              <SkillCard {...skill} />
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Row 7: Tools Heading */}
         <motion.div
           variants={headingVariants}
           initial="hidden"
@@ -86,7 +136,7 @@ const SkillsGrid = () => {
           </h2>
         </motion.div>
 
-        {/* Row 6: Tools Skills */}
+        {/* Row 8: Tools Skills */}
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
           variants={gridVariants}

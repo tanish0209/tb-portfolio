@@ -19,36 +19,64 @@ import supabase from "../assets/Tech_Logos/supabase.png"
 import postman from "../assets/Tech_Logos/postman.svg"
 import ai from "../assets/Tech_Logos/ai.png"
 import canva from "../assets/Tech_Logos/canva.png"
+import figma from "../assets/Tech_Logos/figma.png"
+import java from "../assets/Tech_Logos/java.png"
+import nextjs from "../assets/Tech_Logos/nextjs.svg"
+import redux from "../assets/Tech_Logos/redux.png"
+import zustand from "../assets/Tech_Logos/zustand.png"
+import aws from "../assets/Tech_Logos/aws.png"
+import docker from "../assets/Tech_Logos/docker.png"
+import kubernetes from "../assets/Tech_Logos/kubernetes.png"
+import githubactions from "../assets/Tech_Logos/githubactions.png"
+import jenkins from "../assets/Tech_Logos/jenkins.png"
 const skills = {
+    languages: [
+        { name: "Java", proficiency: 7, logo: java },
+        { name: "JavaScript (ES6+)", proficiency: 7, logo: js },
+        { name: "TypeScript", proficiency: 8, logo: ts },
+        { name: "HTML5", proficiency: 9, logo: html },
+    ],
     frontend: [
-        { name: "React.js", proficiency: 8, logo: react },
-        { name: "Tailwind CSS", proficiency: 7, logo: tailwind },
-        { name: "Bootstrap", proficiency: 8, logo: bootstrap },
+        { name: "React.js", proficiency: 9, logo: react },
+        { name: "Next.js", proficiency: 7, logo: nextjs },
+        { name: "Redux", proficiency: 6, logo: redux },
+        { name: "Zustand", proficiency: 6, logo: zustand },
+        { name: "TypeScript", proficiency: 8, logo: ts },
+        { name: "JavaScript (ES6+)", proficiency: 7, logo: js },
         { name: "HTML5", proficiency: 9, logo: html },
         { name: "CSS3", proficiency: 9, logo: css },
-        { name: "JavaScript (ES6+)", proficiency: 7, logo: js },
+        { name: "Tailwind CSS", proficiency: 7, logo: tailwind },
+        { name: "Bootstrap", proficiency: 8, logo: bootstrap },
         { name: "Vite", proficiency: 8, logo: vite },
-        { name: "TypeScript", proficiency: 6, logo: ts },
     ],
 
     backend: [
-        { name: "JavaScript (ES6+)", proficiency: 7, logo: js },
+        { name: "JavaScript (ES6+)", proficiency: 8, logo: js },
+        { name: "TypeScript", proficiency: 8, logo: ts },
         { name: "Node.js", proficiency: 7, logo: nodejs },
         { name: "Express.js", proficiency: 7, logo: express },
         { name: "MongoDB", proficiency: 9, logo: mongodb },
-        { name: "TypeScript", proficiency: 6, logo: ts },
-        { name: "NPM", proficiency: 8, logo: npm },
-        { name: "MySQL", proficiency: 8, logo: mysql },
         { name: "PostgreSQL", proficiency: 7, logo: postgresql },
+        { name: "MySQL", proficiency: 8, logo: mysql },
+        { name: "NPM", proficiency: 8, logo: npm },
     ],
 
+
+    cloud: [
+        { name: "AWS", proficiency: 6, logo: aws },
+        { name: "Docker", proficiency: 7, logo: docker },
+        { name: "Kubernetes", proficiency: 6, logo: kubernetes },
+        { name: "GitHub Actions", proficiency: 5, logo: githubactions },
+        { name: "Jenkins", proficiency: 4, logo: jenkins },
+
+    ],
     tools: [
         { name: "Git", proficiency: 8, logo: git },
         { name: "GitHub", proficiency: 8, logo: github },
         { name: "VS Code", proficiency: 9, logo: vscode },
         { name: "Supabase", proficiency: 6, logo: supabase },
         { name: "Postman", proficiency: 8, logo: postman },
-        { name: "Figma", proficiency: 9, logo: react },
+        { name: "Figma", proficiency: 9, logo: figma },
         { name: "Adobe Illustrator", proficiency: 7, logo: ai },
         { name: "Canva", proficiency: 8, logo: canva }
     ],

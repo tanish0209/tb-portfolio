@@ -8,7 +8,10 @@ import linkedin from "../../assets/linkedin.png";
 const HomeSection = () => {
   return (
     <div className="py-[2vh] mx-[4vw] overflow-visible">
-      <div className="flex flex-col md:grid md:grid-cols-[30%_40%_30%] md:grid-rows-2 overflow-x-visible h-full md:h-[90vh] max-h-screen w-full gap-[3vh] md:gap-0">
+      <div
+        className="flex flex-col md:grid md:grid-cols-[30%_40%_30%] md:grid-rows-2 overflow-x-visible  md:min-h-[20vh] lg:min-h-[90vh]
+h-auto w-full gap-[3vh] md:gap-0"
+      >
         {/* 1. Col 1 - Row 1 */}
         <motion.div
           initial={{ x: "-10vw", opacity: 0 }}
@@ -58,20 +61,20 @@ const HomeSection = () => {
           initial={{ y: "10vh", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeIn" }}
-          className="order-4 md:order-none relative rounded-xl overflow-hidden p-[1vw] flex items-center justify-center md:col-start-2 md:row-start-1 md:row-span-2 min-h-[65vw] md:min-h-[40vh]" // ✅ min height
+          className="order-4 md:order-none relative rounded-xl overflow-hidden p-[1vw] flex items-center justify-center md:col-start-2 md:row-start-1 md:row-span-2 min-h-[65vw] md:min-h-[25vh]" // ✅ min height
         >
           {/* Glow circle */}
-          <div className="absolute -bottom-[10vh] left-1/2 translate-x-[-50%] w-[75vw] h-[75vw] md:w-[35vw] md:h-[35vw] rounded-full bg-[radial-gradient(circle,_white_20%,var(--text-secondary)_80%)]"></div>
+          <div className="absolute -bottom-[10vh] md:-bottom-[1vh] lg:-bottom-[10vh] left-1/2 translate-x-[-50%] w-[75vw] h-[75vw] md:w-[30vw] md:h-[30vw] lg:w-[35vw] lg:h-[35vw] rounded-full bg-[radial-gradient(circle,_white_20%,var(--text-secondary)_80%)]"></div>
 
           {/* Profile */}
           <img
             src={tb}
-            className="absolute z-10 bottom-0 scale-150 w-[70vw] md:w-[33vw] lg:w-[25vw] object-contain h-[90%] lg:h-[80%] 2xl:h-[82%] max-h-[96%]" // ✅ object-fit + max height
+            className="absolute z-10 bottom-0 scale-150 w-[70vw] md:w-[20vw] lg:w-[25vw] object-contain h-[90%] lg:h-[80%] 2xl:h-[82%] max-h-[96%]"
             alt="profile"
           />
 
           {/* GitHub / LinkedIn Buttons */}
-          <div className="absolute z-20 bottom-0 w-full h-[7vh] flex justify-center items-center gap-[4vw] bg-[#1e1e1e] border border-[#424242] rounded-xl">
+          <div className="absolute z-20 bottom-0 w-full p-1 lg:p-5 max-h-[7vh] flex justify-center items-center gap-[4vw] bg-[#1e1e1e] border border-[#424242] rounded-xl">
             <button
               onClick={() =>
                 window.open("https://github.com/tanish0209", "_blank")

@@ -8,10 +8,11 @@ import react from "../../assets/Tech_Logos/react.png";
 import nodejs from "../../assets/Tech_Logos/nodejs.png";
 import express from "../../assets/Tech_Logos/express.png";
 import mongodb from "../../assets/Tech_Logos/mongodb.png";
-import git from "../../assets/Tech_Logos/git.png";
-import git_hub from "../../assets/Tech_Logos/git_hub.png";
-import vscode from "../../assets/Tech_Logos/vscode.png";
-import postman from "../../assets/Tech_Logos/postman.svg";
+import docker from "../../assets/Tech_Logos/docker.png";
+import kubernetes from "../../assets/Tech_Logos/kubernetes.png";
+import aws from "../../assets/Tech_Logos/aws.png";
+import githubactions from "../../assets/Tech_Logos/githubactions.png";
+
 import { useNavigate } from "react-router";
 
 const skills = {
@@ -27,11 +28,11 @@ const skills = {
     { src: express, label: "Express.JS" },
     { src: mongodb, label: "MongoDB" },
   ],
-  tools: [
-    { src: git_hub, label: "GitHub" },
-    { src: git, label: "Git" },
-    { src: postman, label: "Postman" },
-    { src: vscode, label: "VS Code" },
+  devops: [
+    { src: docker, label: "Docker" },
+    { src: kubernetes, label: "Kubernetes" },
+    { src: aws, label: "AWS" },
+    { src: githubactions, label: "Github Actions" },
   ],
 };
 
@@ -108,7 +109,7 @@ const SkillsSection = () => {
 
         {/* Skills Grid */}
         <div className="grid grid-rows-6 place-items-center text-[var(--text-primary)] sm:mt-6 sm:gap-y-6">
-          {["frontend", "backend", "tools"].map((category, catIdx) => (
+          {["frontend", "backend", "devops"].map((category, catIdx) => (
             <React.Fragment key={category}>
               <div className="text-[clamp(1.5rem,4vw,3rem)] border-b-2 font-bold border-[var(--text-secondary)]">
                 {category.charAt(0).toUpperCase() + category.slice(1)}

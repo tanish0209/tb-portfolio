@@ -1,7 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 const ExperienceContent = () => {
   const experiences = [
+    {
+      position: "Web Development Intern",
+      company: "Sopra Steria India",
+      duration: "July 2025 - November 2025",
+      desc: ` Developed a task management platform scalable with secure multi-role access.\n Designed 8+ normalized PostgreSQL schemas using Prisma ORM for users, projects and tasks.\n Built 40+ server-side APIs covering authentication, workflows and collaboration features.\n Implemented JWT authentication and authorization to ensure secure access across 4+ roles.`,
+      isActive: false,
+    },
     {
       position: "Graphic Designing Intern",
       company: "GWave Innovations Pvt. Ltd.",
@@ -15,13 +23,6 @@ const ExperienceContent = () => {
       duration: "June 2024 - July 2024",
       desc: `Designed professional business cards that aligned with the company's branding.\nCreated engaging social media posts and stories for product promotions and brand awareness.\nDeveloped the company's profile, ensuring it accurately represented the brand.\nDesigned a comprehensive product catalogue, showcasing the company's offerings in a visually appealing way.`,
       isActive: false,
-    },
-    {
-      position: "Actively Looking",
-      company: "",
-      duration: "",
-      desc: "Open to Opportunities",
-      isActive: true,
     },
   ];
 
@@ -37,94 +38,168 @@ const ExperienceContent = () => {
       },
     }),
   };
+
   return (
     <div className="mt-10">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className=" md:py-[5vh]  w-full max-w-[99vw] rounded-2xl"
+        className="md:py-[5vh] w-full max-w-[99vw] rounded-2xl"
       >
-        <div>
-          {experiences.map((exp, i) => (
-            <motion.div
-              key={i}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="grid grid-cols-[20%_80%] md:grid-cols-[45%_10%_45%] items-start md:gap-0 relative"
-            >
-              {/* Position */}
+        <div className="relative max-w-6xl mx-auto">
+          {/* Desktop – centered vertical line */}
+          <div
+            className="hidden lg:block absolute left-1/2 top-0 -translate-x-1/2 w-0.5 border-l-2 border-dashed border-white/60"
+            style={{ height: `calc(100% - 22rem)` }}
+          ></div>
+
+          {/* Mobile / Tablet – left vertical line */}
+          <div
+            className="lg:hidden absolute left-4 sm:left-6 top-0 w-0.5 border-l-2 border-dashed border-white/60"
+            style={{ height: `calc(100% - 26rem)` }}
+          ></div>
+
+          <div className="space-y-10 sm:space-y-12 lg:space-y-16">
+            {experiences.map((exp, i) => (
               <motion.div
-                variants={fadeInUp}
-                custom={i + 1}
-                className="col-start-2 row-start-1 md:col-start-1 md:row-start-auto order-2 md:order-1 text-[clamp(1.2rem,2vw,1.8rem)] font-extrabold text-[var(--text-secondary)] "
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="relative"
               >
-                {exp.position}
-                <div className="text-[clamp(1rem,1.5vw,1.6rem)] font-medium text-gray-200">
-                  {exp.company}
-                </div>
-                {exp.duration && (
-                  <div className="text-[clamp(0.7rem,1.3vw,1.4rem)] text-gray-300 mb-3  md:mb-30">
-                    {exp.duration}
-                  </div>
-                )}
-              </motion.div>
-
-              {/* Timeline (dot) */}
-              <div className="col-start-1 row-start-1 md:col-start-2 md:row-start-auto order-1 md:order-2 flex flex-col items-center">
-                <motion.div
-                  variants={fadeInUp}
-                  custom={i + 1}
-                  className="rounded-full w-10 h-10 flex justify-center items-center border-2 border-dashed border-[var(--text-primary)]"
-                >
-                  <div
-                    className={`rounded-full w-6 h-6 ${
-                      exp.isActive
-                        ? "bg-[#1e1e1e]"
-                        : "bg-[var(--text-secondary)]"
-                    } z-10`}
-                  ></div>
-                </motion.div>
-
-                {/* Vertical Line for md+ */}
-                {i < experiences.length - 1 && (
+                {/* DOT — Desktop center */}
+                <div className="hidden lg:block absolute left-1/2 -translate-x-1/2">
                   <motion.div
                     variants={fadeInUp}
-                    custom={i + 1.5}
-                    className=" md:block border-l-2 border-dashed border-white h-24 min-[450px]:h-17 sm:h-17 md:h-60 lg:h-90"
-                  />
-                )}
-              </div>
-
-              {/* Vertical Line for mobile (below md) */}
-              {i < experiences.length - 1 && (
-                <motion.div
-                  variants={fadeInUp}
-                  custom={i + 1.5}
-                  className="block md:hidden col-start-1 row-start-2 border-l-2 border-dashed border-white h-full mx-auto"
-                />
-              )}
-
-              {/* Description */}
-              <motion.div
-                variants={fadeInUp}
-                custom={i + 1}
-                className="col-start-2 row-start-2 md:col-start-3 md:row-start-auto order-3 md:order-3 flex flex-col gap-1 pb-20 md:pb-0"
-              >
-                <div className="text-[clamp(0.9rem,1.5vw,1.4rem)] font-medium text-[var(--text-primary)]">
-                  {exp.desc.split("\n").map((line, index) => (
-                    <li
-                      key={index}
-                      className="mb-2 [text-indent:-1.5em] [padding-left:1em]"
-                    >
-                      {line.trim()}
-                    </li>
-                  ))}
+                    custom={i + 1}
+                    className="w-7 h-7 rounded-full border-2 border-dashed border-[var(--text-primary)] flex items-center justify-center shadow-lg"
+                  >
+                    <div
+                      className={`w-4 h-4 rounded-full ${
+                        exp.isActive
+                          ? "bg-[#1e1e1e]"
+                          : "bg-[var(--text-secondary)]"
+                      }`}
+                    ></div>
+                  </motion.div>
                 </div>
+
+                {/* DOT — Mobile left */}
+                <div className="lg:hidden absolute left-4 sm:left-6 -translate-x-1/2">
+                  <motion.div
+                    variants={fadeInUp}
+                    custom={i + 1}
+                    className="w-6 h-6 rounded-full border-2 border-dashed border-[var(--text-primary)] flex items-center justify-center shadow-lg"
+                  >
+                    <div
+                      className={`w-3 h-3 rounded-full ${
+                        exp.isActive
+                          ? "bg-[#1e1e1e]"
+                          : "bg-[var(--text-secondary)]"
+                      }`}
+                    ></div>
+                  </motion.div>
+                </div>
+
+                {/* GRID LAYOUT (orientation preserved) */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
+                  {/* Mobile / Tablet — stacked */}
+                  <div className="lg:hidden pl-10 sm:pl-14">
+                    <motion.h3
+                      variants={fadeInUp}
+                      custom={i + 1}
+                      className="text-[clamp(1.2rem,2vw,1.8rem)] font-extrabold text-[var(--text-secondary)]"
+                    >
+                      {exp.position}
+                    </motion.h3>
+
+                    <motion.p
+                      variants={fadeInUp}
+                      custom={i + 1}
+                      className="text-[clamp(1rem,1.5vw,1.6rem)] font-medium text-gray-200"
+                    >
+                      {exp.company}
+                    </motion.p>
+
+                    {exp.duration && (
+                      <motion.p
+                        variants={fadeInUp}
+                        custom={i + 1}
+                        className="text-[clamp(0.7rem,1.3vw,1.4rem)] text-gray-300 mb-3"
+                      >
+                        {exp.duration}
+                      </motion.p>
+                    )}
+                  </div>
+
+                  {/* Desktop LEFT — Position / Company / Duration */}
+                  <div className="hidden lg:block text-left pr-10">
+                    <motion.h3
+                      variants={fadeInUp}
+                      custom={i + 1}
+                      className="text-[clamp(1.2rem,2vw,1.8rem)] font-extrabold text-[var(--text-secondary)]"
+                    >
+                      {exp.position}
+                    </motion.h3>
+
+                    <motion.p
+                      variants={fadeInUp}
+                      custom={i + 1}
+                      className="text-[clamp(1rem,1.5vw,1.6rem)] font-medium text-gray-200"
+                    >
+                      {exp.company}
+                    </motion.p>
+
+                    {exp.duration && (
+                      <motion.p
+                        variants={fadeInUp}
+                        custom={i + 1}
+                        className="text-[clamp(0.7rem,1.3vw,1.4rem)] text-gray-300"
+                      >
+                        {exp.duration}
+                      </motion.p>
+                    )}
+                  </div>
+
+                  {/* Desktop RIGHT — Description */}
+                  <div className="pl-10">
+                    <motion.div
+                      variants={fadeInUp}
+                      custom={i + 1}
+                      className="text-[clamp(0.9rem,1.5vw,1.4rem)] font-medium text-[var(--text-primary)]"
+                    >
+                      {exp.desc.split("\n").map((line, index) => (
+                        <li key={index} className="mb-2 [padding-left:1em]">
+                          {line.trim()}
+                        </li>
+                      ))}
+                    </motion.div>
+                  </div>
+                </div>
+
+                {/* Connecting timeline lines */}
+                {i < experiences.length - 1 && (
+                  <>
+                    {/* Desktop */}
+                    <motion.div
+                      variants={fadeInUp}
+                      custom={i + 1.5}
+                      className="hidden lg:block absolute h-24"
+                    />
+
+                    {/* Mobile */}
+                    <motion.div
+                      variants={fadeInUp}
+                      custom={i + 1.5}
+                      className="lg:hidden  h-16"
+                    />
+                  </>
+                )}
               </motion.div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </motion.div>
     </div>

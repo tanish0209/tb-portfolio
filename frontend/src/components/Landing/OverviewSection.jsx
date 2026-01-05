@@ -62,8 +62,8 @@ const OverviewSection = () => {
             <button
               onClick={() => {
                 const link = document.createElement("a");
-                link.href = "/Tanish Bajaj_Frontend_Resume.pdf";
-                link.download = "Tanish Bajaj_Frontend_Resume.pdf";
+                link.href = "/Tanish_Bajaj_Resume.pdf";
+                link.download = "Tanish_Bajaj_Resume.pdf";
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
